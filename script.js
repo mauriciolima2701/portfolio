@@ -1,7 +1,7 @@
 // Pegando as informações dos Botões do site para poder atribuir a eles uma função de abrir os links
 const btn_github = document.querySelector(".gradient__btn");
 const btn_landing_saas = document.getElementById("btn-landing-saas");
-const btn_copa = document.getElementById("btn-copa");
+const btn_world_cup = document.getElementById("btn-cup");
 const btn_growtask = document.getElementById("btn-growtask");
 
 btn_github.addEventListener("click", () => {
@@ -15,7 +15,7 @@ btn_landing_saas.addEventListener("click", () => {
 	);
 });
 
-btn_copa.addEventListener("click", () => {
+btn_world_cup.addEventListener("click", () => {
 	window.open("https://github.com/mauriciolima2701/event-nlw-copa", "_blank");
 });
 
@@ -24,9 +24,9 @@ btn_growtask.addEventListener("click", () => {
 });
 
 // Deixando a data do footer sempre atualizada
-const ano = new Date().getFullYear();
+const year_footer = new Date().getFullYear();
 
-document.getElementById("year").textContent = ano;
+document.getElementById("year").textContent = year_footer;
 
 // Ativando o menu hamburguer para mobile e realizado a abertura e fechamento do menu
 // Fiz dessa forma para não usar nenhuma biblioteca de ícones
@@ -72,11 +72,11 @@ function showMessage(text, type) {
 form.addEventListener("submit", (event) => {
 	event.preventDefault(); // Impede o envio do formulário, que a página recarregue
 	// Pegando os valores dos inputs e utilizando o método trim para tirar os espaços.
-	const nome = document.getElementById("name").value.trim();
+	const name = document.getElementById("name").value.trim();
 	const email = document.getElementById("email").value.trim();
-	const mensagem = document.getElementById("message").value.trim();
+	const message = document.getElementById("message").value.trim();
 
-	if (!nome || !email || !mensagem) {
+	if (!name || !email || !message) {
 		// alert("Preencha todos os campos.");
 		showMessage("Preencha todos os campos.", "error");
 		return;
