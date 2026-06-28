@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Mauricio | Portfólio</title>
+	</head>
+	<body>
+		<!-- Cabeçalho do Site -->
+		<header class="header">
+			<a href="#home" class="logo"> Mauricio <span>Lima</span></a>
+			<div class="icon__menu">&#9776</div>
+			<nav class="header__navbar">
+				<ul>
+					<li><a href="#about">Sobre</a></li>
+					<li><a href="#background">Formação</a></li>
+					<li><a href="#projects">Portfólio</a></li>
+					<li><a href="#contact">Contato</a></li>
+				</ul>
+			</nav>
+			<button class="gradient__btn">GitHub</button>
+		</header>
+		<!-- Seção Home, inicio do site -->
+		<section class="home" id="home">
+			<div class="home__container">
+				<h1>Olá, seja bem-vindo!</h1>
+				<h3>Eu sou <span>Mauricio </span></h3>
+				<p>Desenvolvedor Front-End</p>
+				<div class="home__social">
+					<a
+						href="https://github.com/mauriciolima2701"
+						target="_blank"
+						class="home__social-link"
+					>
+						<img src="./img/github-outline.svg" alt="GitHub" />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/mauriciolimas/"
+						target="_blank"
+						class="home__social-link"
+					>
+						<img src="./img/linkedin.svg" alt="LinkedIn" />
+					</a>
+					<a
+						href="https://www.instagram.com/mauriciolimas_"
+						target="_blank"
+						class="home__social-link"
+					>
+						<img src="./img/instagram-outline.svg" alt="Instagram" />
+					</a>
+				</div>
+			</div>
+			<div class="home__img">
+				<img
+					src="./img/home.png"
+					alt="imagem ilustrativa desenvolvedor front-end"
+				/>
+			</div>
+		</section>
+
+		<!-- Seção Sobre mim -->
+		<section class="about" id="about">
+			<div class="about__img">
+				<img src="./img/about-me.png" alt="Foto de perfil de um homem" />
+			</div>
+			<div class="about__container">
+				<h1>Sobre <span>Mim</span></h1>
+				<p>Meu nome é Mauricio Lima, sou desenvolvedor Front-End JR.</p>
+				<p>Gosto de desenvolver e aprender novas tecnologias.</p>
+				<p>
+					Sou apaixonado por tecnologia e programação, e estou sempre em busca
+					de novos desafios para aprimorar minhas habilidades e adquir novos
+					conhecimentos.
+				</p>
+				<p>
+					Tenho experiência em desenvolvimento web, utilizando HTML, CSS,
+					JavaScript e React.
+				</p>
+				<p>
+					Além disso meus hobbies são assistir e jogar futebol, assistir filmes,
+					séries e ler livros.
+				</p>
+			</div>
+		</section>
+
+		<!-- Seção Formação -->
+		<section class="background" id="background">
+			<div class="background__container">
+				<h1>Formação</h1>
+				<ul>
+					<li>
+						Bacharelado em Engenharia de Software - UNINTER (em andamento)
+					</li>
+					<li>Growdev - Formação Starter Desenvolvimento FullStack Web</li>
+					<li>
+						Cursos disponibilizados na plataforma FullStack Club - Felipe Rocha
+					</li>
+					<li>
+						Conhecimentos em HTML, CSS, JavaScript/Typescript, React, Next,
+						Python
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Seção Portfólio -->
+		<section class="projects" id="projects">
+			<h1 class="projects__title">Portfólio</h1>
+			<div class="projects__container">
+				<div class="projects__card">
+					<img src="./img/project1-growTask.png" alt="Imagem do projeto 1" />
+					<h3>GrowTask</h3>
+					<p>Aplicação para gerenciamento de tarefas pessoais</p>
+					<button class="gradient__btn" id="btn-growtask">Ver Projeto</button>
+				</div>
+
+				<div class="projects__card">
+					<img src="./img/project2-copa.jpg" alt="Imagem do projeto 2" />
+					<h3>Copa do Mundo</h3>
+					<p>Landing page da Copa do Mundo de 2022</p>
+					<button class="gradient__btn" id="btn-copa">Ver Projeto</button>
+				</div>
+
+				<div class="projects__card">
+					<img
+						src="./img/project3-landing_saas.jpg"
+						alt="Imagem do projeto 3"
+					/>
+					<h3>Landing Page</h3>
+					<p>Landing page da página inicial de um SaaS</p>
+					<button class="gradient__btn" id="btn-landing-saas">
+						Ver Projeto
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Seção Contato -->
+		<section class="contact" id="contact">
+			<h1 class="contact__title">Contato</h1>
+            <!-- div de notificação, para as mensagens do formulário -->
+            <div id="messages" class="messages"></div>
+			<form class="contact__form" action="#">
+				<div class="input-group">
+					<div class="input-box">
+						<label for="name">Nome:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Digite seu nome ..."
+							required
+						/>
+					</div>
+					<div class="input-box">
+						<label for="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Digite seu email ..."
+							required
+						/>
+					</div>
+				</div>
+				<div class="input-group">
+					<div class="input-box">
+						<label for="message">Mensagem:</label>
+						<textarea
+							id="message"
+							name="message"
+							placeholder="Digite sua mensagem ..."
+                            cols="30"
+                            rows="10"
+							required
+						></textarea>
+					</div>
+				</div>
+				<button class="gradient__btn" type="submit">Enviar</button>
+			</form>
+		</section>
+
+        <!-- Seção Footer -->
+        <footer class="footer">
+            <p>© <span id="year"></span> Mauricio Lima | Todos os direitos reservados.</p>
+
+		<script src="script.js"></script>
+	</body>
+</html>

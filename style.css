@@ -1,0 +1,540 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+/* Configurando variáveis CSS para ser reaproveitadas as cores*/
+:root {
+	--bg-color: #000000;
+	--bg-color-transparent: rgba(74, 74, 74, 0.5);
+	--second-bg-color: #6a90f2;
+	--bg-color-success: #28a745;
+	--bg-color-error: #dc3545;
+	--text-color-white: #fff;
+	--text-color-gray: #8c8c8c;
+	--main-color: #9956f6;
+	--gradient-color: linear-gradient(270deg, #9956f6 10%, #28e3ed 100%);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: var(--bg-color);
+	color: var(--text-color-white);
+}
+
+/* ------ cabeçalho e menu do site ------ */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--bg-color-transparent);
+	padding: 2rem 12%;
+	border-bottom: 3px solid var(--main-color);
+	box-shadow: 0 0 100px var(--main-color);
+	backdrop-filter: blur(12px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.header .icon__menu {
+	display: none;
+}
+
+.header__navbar ul {
+	display: flex;
+	gap: 2rem;
+}
+
+.header__navbar li a {
+	color: var(--text-color-white);
+	transition: 0.3s ease-in-out;
+	font-weight: 500;
+	line-height: 1.5;
+	border-bottom: 3px solid transparent;
+}
+
+.header__navbar li a:hover {
+	color: var(--main-color);
+	border-bottom: 3px solid var(--main-color);
+}
+
+.logo {
+	font-size: 2rem;
+	color: var(--text-color-white);
+	font-weight: 800;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+	transform: scale(1.1);
+}
+
+/* Mudando o background do logo que contém o meu sobrenome */
+.logo span {
+	background: var(--gradient-color);
+	background-clip: text;
+	/* "webKit" Para garantir que essa estilização funcione em navegadores Safari e Chrome */
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.gradient__btn {
+	font-size: 1rem;
+	background: var(--main-color);
+	cursor: pointer;
+	letter-spacing: 1px;
+	color: var(--text-color-white);
+	font-weight: 600;
+	padding: 0.5rem 1.6rem;
+	line-height: 1.5;
+	border-radius: 2rem;
+	border: none;
+	transition: 0.3s ease-in-out;
+	text-wrap: nowrap;
+}
+
+.gradient__btn:hover {
+	transform: scale(1.1);
+}
+
+/* ------ Secão Home do site ------ */
+
+.home {
+	min-height: 100vh;
+	padding: 10rem 12%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.home__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+}
+
+.home__container h1 {
+	font-size: 2.5rem;
+	font-weight: 800;
+}
+
+.home__container h3 span {
+	background: var(--gradient-color);
+	background-clip: text;
+	/* "webKit" Para garantir que essa estilização funcione em navegadores Safari e Chrome */
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.home__container h3 {
+	font-size: 2rem;
+	font-weight: 800;
+	margin-top: 1rem;
+}
+
+.home__container p {
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.5;
+	color: var(--main-color);
+}
+
+.home__social {
+	margin-top: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+
+.home__social-link img {
+	width: 1.8rem;
+	background: var(--text-color-white);
+	border-radius: 24px;
+	border: none;
+	transition: 0.3s ease-in-out;
+}
+
+.home__social-link img:hover {
+	background: var(--main-color);
+	box-shadow: 0 0 48px var(--main-color);
+}
+
+.home__img img {
+	width: 32vw;
+}
+
+/* ------ Secão Sobre mim do site ------ */
+
+.about {
+	min-height: 100vh;
+	padding: 10rem 12%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.about__container {
+	max-width: 50%;
+}
+
+.about__img img {
+	width: 26vw;
+	border-radius: 100%;
+	border: none;
+	transition: 0.3s ease-in-out;
+}
+
+.about__img img:hover {
+	box-shadow: 0 0 80px var(--main-color);
+	cursor: pointer;
+}
+
+.about__container h1 {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 2rem;
+}
+
+.about__container p {
+	font-size: 1.2rem;
+	line-height: 2;
+}
+
+.about__container span {
+	background: var(--gradient-color);
+	background-clip: text;
+	/* "webKit" Para garantir que essa estilização funcione em navegadores Safari e Chrome */
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+/* ------ Secão Formação ------ */
+
+.background__container {
+	min-height: 100vh;
+	padding: 10rem 12%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.background__container h1 {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 2rem;
+	background: var(--gradient-color);
+	background-clip: text;
+	/* "webKit" Para garantir que essa estilização funcione em navegadores Safari e Chrome */
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.background__container li {
+	font-size: 1.2rem;
+	line-height: 2.5;
+	list-style-type: circle;
+}
+
+/* ------ Secão Projetos ------ */
+
+.projects {
+	min-height: 100vh;
+	padding: 10rem 12%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.projects__title {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 2rem;
+	background: var(--gradient-color);
+	background-clip: text;
+	/* "webKit" Para garantir que essa estilização funcione em navegadores Safari e Chrome */
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.projects__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.projects__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: var(--second-bg-color);
+	border: 3px solid var(--main-color);
+	border-radius: 3rem;
+	gap: 1rem;
+	padding: 4rem 2rem;
+	overflow: hidden;
+	box-shadow: 0 0 8px var(--main-color);
+	transition: 0.3s ease-in-out;
+}
+
+.projects__card:hover {
+	box-shadow:
+		0 0 24px var(--main-color),
+		0 0 48px var(--main-color);
+	trasform: scale(1.02);
+}
+
+.projects__card img {
+	width: 200px;
+	height: 160px;
+	border-radius: 2rem;
+	object-fit: cover;
+}
+
+.projects__card h3 {
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+.projects__card p {
+	line-height: 1.5;
+	max-width: 240px;
+}
+
+/* ------ Secão Contato ------ */
+
+.contact {
+	min-height: 100vh;
+	padding: 10rem 12%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.contact__title {
+	font-size: 3.5rem;
+	font-weight: 800;
+	margin-bottom: 2rem;
+	background: var(--gradient-color);
+	background-clip: text;
+	/* "webKit" Para garantir que essa estilização funcione em navegadores Safari e Chrome */
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	width: 60%;
+}
+
+.contact__form .gradient__btn {
+	width: 30%;
+}
+
+.contact__form .input-box input,
+.contact__form .input-box textarea {
+	width: 100%;
+	padding: 1rem;
+	color: var(--text-color-white);
+	border-radius: 1rem;
+	border: 2px solid var(--main-color);
+	outline: none;
+	background: transparent;
+	margin-top: 6px;
+	resize: none;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 100%;
+}
+
+/* ------ Configurando as mensagens de notificação do formulário ------ */
+
+.messages {
+	position: fixed;
+	top: 16%;
+	right: 20px;
+
+	padding: 15px 20px;
+	border-radius: 8px;
+
+	color: #fff;
+	font-weight: bold;
+
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX(120%);
+}
+
+.messages.show {
+	animation: toast 3s ease forwards;
+}
+
+.messages.success {
+	background: var(--bg-color-success);
+}
+
+.messages.error {
+	background: var(--bg-color-error);
+}
+
+/* Animação do toast, mensagem de notificação */
+
+@keyframes toast {
+	0% {
+		transform: translateX(120%);
+		opacity: 0;
+	}
+
+	15% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	85% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(120%);
+		opacity: 0;
+	}
+}
+
+/* ------ Footer  do site ----- */
+
+.footer {
+	text-align: center;
+	background: var(--bg-color-transparent);
+	padding: 1.4rem 12%;
+	border-top: 1px solid var(--main-color);
+	backdrop-filter: blur(12px);
+}
+
+.footer p {
+	font-size: 0.8rem;
+	color: var(--text-color-gray);
+}
+
+/* ------ Responsividade ------ */
+
+@media (max-width: 1024px) {
+	.header {
+		padding: 2rem 6%;
+	}
+
+	.header .icon__menu {
+		display: block;
+		font-size: 1.6rem;
+	}
+
+	.header__navbar {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 50%;
+		padding: 1rem 2rem;
+		background: var(--bg-color);
+		border-bottom-left-radius: 3rem;
+		border-left: 2px solid var(--main-color);
+		border-bottom: 2px solid var(--main-color);
+		display: none;
+	}
+
+	.header__navbar.active {
+		display: block;
+	}
+
+	.header .gradient__btn {
+		display: none;
+	}
+
+	.header__navbar ul {
+		display: block;
+		font-size: 1.6rem;
+		margin: 3rem 0;
+	}
+
+	.header__navbar li {
+		padding: 1rem 0;
+	}
+
+	.home {
+		padding: 10rem 6%;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.home__container {
+		align-items: center;
+		text-align: center;
+	}
+
+	.home__img img {
+		width: 60vw;
+	}
+
+	.about__container {
+		max-width: 100%;
+	}
+
+	.about {
+		padding: 10rem 6%;
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+
+	.about__img img {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 768px) {
+	.about__container p {
+		text-align: left;
+	}
+
+	.contact__form {
+		width: 100%;
+	}
+
+	.contact__form .gradient__btn {
+		width: 100%;
+	}
+}
+
+@media (max-width: 425px) {
+	.header .logo {
+		font-size: 1.6rem;
+	}
+}
